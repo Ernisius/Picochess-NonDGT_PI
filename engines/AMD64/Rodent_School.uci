@@ -1,0 +1,626 @@
+[S_Amy]
+; Amy personality for Rodent III
+; weak, aggressive, slow
+;
+Pawn= = 100
+Knight= = 325
+Bishop= = 335
+Rook= = 500
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 200
+OppAttack = 100
+OwnMobility = 200
+OppMobility = 100
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 0
+NpsLimit = 64
+EvalBlur = 48
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 4
+SlowMover = 150
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Andy]
+; Andy personality for Rodent III
+; author: Pawel Koziol
+; weak, attacker
+;
+Pawn= = 100
+Knight= = 325
+Bishop= = 335
+Rook= = 500
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 150
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 100
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 0
+NpsLimit = 300
+EvalBlur = 36
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 4
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Ben]
+; Ben personality for Rodent III chess engine
+; author: Pawel Koziol
+; weak, balanced, precise eval for his strength range
+;
+Pawn= = 100
+Knight= = 325
+Bishop= = 335
+Rook= = 500
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 100
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 100
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 0
+NpsLimit = 64
+EvalBlur = 24
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Chris]
+; Chris personality for Rodent III chess engine
+; author: Pawel Koziol
+; weak, classical pst + restraint
+;
+Pawn= = 100
+Knight= = 325
+Bishop= = 335
+Rook= = 500
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 100
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 120
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 0
+NpsLimit = 72
+EvalBlur = 48
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Dory]
+; Dory personality for Rodent III chess engine
+; author: Pawel Koziol
+; weak, defense oriented
+;
+Pawn= = 100
+Knight= = 325
+Bishop= = 335
+Rook= = 500
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 100
+OppAttack = 150
+OwnMobility = 100
+OppMobility = 150
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 1
+NpsLimit = 88
+EvalBlur = 36
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Frank]
+; Frank personality for Rodent III chess engine
+; author: Pawel Koziol
+; weak, rushes forward
+;
+Pawn= = 100
+Knight= = 325
+Bishop= = 335
+Rook= = 500
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 100
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 100
+KingTropism = 100
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 100
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 2
+MobilityStyle = 0
+NpsLimit = 88
+EvalBlur = 36
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Nora]
+; Nora personality for Rodent III chess engine
+; author: Pawel Koziol
+; weak, over=s knights, knows how to play with them
+;
+Pawn= = 100
+Knight= = 335
+Bishop= = 305
+Rook= = 500
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 100
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 100
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 200
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 0
+NpsLimit = 88
+EvalBlur = 36
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Pam]
+; Pam personality for Rodent III chess engine
+; author: Pawel Koziol
+; over=s pawns, cares for pawn structure
+;
+Pawn= = 120
+Knight= = 325
+Bishop= = 335
+Rook= = 600
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 100
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 100
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 120
+PawnStructure = 200
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 1
+MobilityStyle = 0
+NpsLimit = 100
+EvalBlur = 36
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Rita]
+; Rita personality for Rodent III ches engine
+; author: Pawel Koziol
+; weak, over=s rooks
+;
+Pawn= = 100
+Knight= = 325
+Bishop= = 335
+Rook= = 600
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 100
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 100
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 0
+NpsLimit = 56
+EvalBlur = 48
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Stan]
+; Stan personality for Rodent III ches engine
+; author: Pawel Koziol
+; Stan likes to simplify
+;
+Pawn= = 100
+Knight= = 335
+Bishop= = 305
+Rook= = 500
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = -5
+KeepBishop = -5
+KeepRook = -10
+KeepQueen = -20
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 100
+OwnAttack = 100
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 100
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 0
+NpsLimit = 128
+EvalBlur = 36
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 100
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+
+[S_Sue]
+; Sue personality for Rodent III chess engine
+; author: Pawel Koziol
+; weak to moderate, likes to sacrifice
+;
+Pawn= = 100
+Knight= = 325
+Bishop= = 335
+Rook= = 600
+Queen= = 1000
+KeepPawn = 0
+KeepKnight = 0
+KeepBishop = 0
+KeepRook = 0
+KeepQueen = 0
+BishopPair = 50
+KnightPair = -10
+ExchangeImbalance = 25
+KnightLikesClosed = 6
+RookLikesOpen = 3
+Material = 80
+OwnAttack = 100
+OppAttack = 100
+OwnMobility = 100
+OppMobility = 100
+KingTropism = 20
+PiecePlacement = 100
+PiecePressure = 100
+PassedPawns = 100
+PawnStructure = 100
+Lines = 100
+Outposts = 100
+Fianchetto = 0
+PawnShield = 120
+PawnStorm = 100
+Forwardness = 0
+DoubledPawnMg = -12
+DoubledPawnEg = -24
+IsolatedPawnMg = -10
+IsolatedPawnEg = -20
+IsolatedOnOpenMg = -10
+BackwardPawnMg = -8
+BackwardPawnEg = -10
+BackwardOnOpenMg = -8
+PstStyle = 0
+MobilityStyle = 0
+NpsLimit = 128
+EvalBlur = 24
+Contempt = 0
+SearchSkill = 10
+RiskyDepth = 0
+SlowMover = 120
+Selectivity = 175
+BookFilter = 20
+GuideBookFile = books/micro.bin
+MainBookFile = books/micro.bin
+

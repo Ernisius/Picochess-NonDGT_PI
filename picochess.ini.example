@@ -34,7 +34,7 @@
 # dgt-port = /dev/ttyACM0
 ## Instead of connecting to a dgt board, you can also start picochess with a command line.
 ## If so, please uncomment the next line
-# enable-console = True
+enable-console = True
 ### Handle with care! Only activate this if you have a DGT Pi clock connected. So be careful!
 ### Also if you activate it but have non-DGT hardware connected (@raspberryPi) you might harm your hardware.
 ## If you have a new DGT Pi clock please uncomment the next line.
@@ -130,7 +130,7 @@
 # log-file = picochess.log
 ## What log level should be used 
 ## Loglevel options are [debug, info, warning, error, critical]
-# log-level = debug
+log-level = debug
 ## PicoChess can use human voices for announcement
 ## Valid voice names are formed from 'talker/voices' folder structure. Please take a look there.
 ## If you want voice output, please uncomment these settings

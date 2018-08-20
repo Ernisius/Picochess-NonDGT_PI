@@ -192,9 +192,9 @@ def git_name():
 
 def get_tags():
     """Get the last 3 tags from git."""
-    git = git_name()
-    tags = [(tags, tags[1] + tags[-2:]) for tags in do_popen([git, 'tag'], log=False).split('\n')[-4:-1]]
-    return tags  # returns something like [('v0.9j', 09j'), ('v0.9k', '09k'), ('v0.9l', '09l')]
+    #git = git_name()
+    #tags = [(tags, tags[1] + tags[-2:]) for tags in do_popen([git, 'tag'], log=False).split('\n')[-4:-1]]
+    #return tags  # returns something like [('v0.9j', 09j'), ('v0.9k', '09k'), ('v0.9l', '09l')]
 
 
 def checkout_tag(tag):

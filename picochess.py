@@ -51,7 +51,7 @@ from dgt.display import DgtDisplay
 from dgt.board import DgtBoard
 from dgt.translate import DgtTranslate
 from dgt.menu import DgtMenu
-
+from SensorBoard import *
 
 class AlternativeMover:
 
@@ -650,6 +650,14 @@ def main():
     if args.enable_console:
         logging.debug('starting PicoChess in console mode')
         RepeatedTimer(1, _dgt_serial_nr).start()  # simulate the dgtboard watchdog
+
+        sb = SensorBoard()
+        sb.start()
+        # rd = RpiDisplay()
+        # piDisplay().start()
+        #KeyboardInput(args.dgtpi).start()
+        BoardDisplay().start()
+
     else:
         # Connect to DGT board
         logging.debug('starting PicoChess in board mode')
@@ -678,8 +686,8 @@ def main():
             user_name = 'Player'
 
     # Update
-    if args.enable_update:
-        update_picochess(args.dgtpi, args.enable_update_reboot, dgttranslate)
+    #if args.enable_update:
+    #   update_picochess(args.dgtpi, args.enable_update_reboot, dgttranslate)
 
     # try the given engine first and if that fails the first/second from "engines.ini" then crush
     engine_file = args.engine if args.engine_remote_server is None else args.engine_remote
@@ -776,7 +784,11 @@ def main():
 
             elif isinstance(event, Event.KEYBOARD_MOVE):
                 move = event.move
+                if game.piece_type_at(move.from_square)==chess.PAWN:
+                     if (play_mode == PlayMode.USER_WHITE  and chess.square_rank(move.to_square) == 7) or (play_mode == PlayMode.USER_BLACK and chess.square_rank(move.to_square) == 0):
+                        move.promotion = chess.QUEEN
                 logging.debug('keyboard move [%s]', move)
+
                 if move not in game.legal_moves:
                     logging.warning('illegal move. fen: [%s]', game.fen())
                 else:
@@ -1132,7 +1144,8 @@ def main():
                 DisplayMsg.show(Message.DGT_BUTTON(button=event.button, dev=event.dev))
 
             elif isinstance(event, Event.KEYBOARD_FEN):
-                DisplayMsg.show(Message.DGT_FEN(fen=event.fen, raw=False))
+
+                DisplayMsg.show(Message.DGT_FEN(fen = done_computer_fen, raw=False))
 
             elif isinstance(event, Event.EXIT_MENU):
                 DisplayMsg.show(Message.EXIT_MENU())
@@ -1144,6 +1157,26 @@ def main():
 
             elif isinstance(event, Event.REMOTE_ROOM):
                 DisplayMsg.show(Message.REMOTE_ROOM(inside=event.inside))
+
+            elif isinstance(event, Event.LIFT_PIECE):
+                mvlist = []
+                src_square = int(event.square)
+
+                for move in game.legal_moves:
+                    if move.from_square == src_square:
+                        # from_square = move.from_square
+
+                        sb.Light_Square(move.to_square, on=True)
+
+            elif isinstance(event, Event.TAKE_BACK):
+                takeback = copy.deepcopy(game)
+                takeback.pop()
+                takeback.pop()
+                fen = takeback.board_fen()
+                process_fen(fen)
+                # DisplayMsg.show(Message.USER_TAKE_BACK(game = game))
+                # DisplayMsg.show(Message.PLAYMOVE(fen=fen))
+
 
             else:  # Default
                 logging.warning('event not handled : [%s]', event)

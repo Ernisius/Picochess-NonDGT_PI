@@ -1,0 +1,1 @@
+H:\Apps\Python\Python36-32\python .\picochess.py

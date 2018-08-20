@@ -84,7 +84,8 @@ class EventApi():
     EXIT_MENU = 'EVT_EXIT_MENU'  # User exists the menu
     UPDATE_PICO = 'EVT_UPDATE'  # User wants to upgrade/downgrade picochess
     REMOTE_ROOM = 'EVT_REMOTE_ROOM'  # User enters/leaves the remote room
-
+    LIFT_PIECE = 'EVT_LIFT_PIECE'   # piece lifted on board
+    TAKE_BACK = 'EVT_TAKE_BACK'     #take back move
 
 class MessageApi():
 
@@ -141,7 +142,7 @@ class MessageApi():
     BATTERY = 'MSG_BATTERY'  # percent of BT battery
     UPDATE_PICO = 'MSG_UPDATE'  # User wants to update picochess
     REMOTE_ROOM = 'MSG_REMOTE_ROOM'  # User enters/leaves a remote room
-
+    DISPLAY_TEXT = 'MSG_DISPLAY_DGT_MESSAGE'
 
 class DgtApi():
 
@@ -234,7 +235,7 @@ class Message():
     BATTERY = ClassFactory(MessageApi.BATTERY, ['percent'])
     UPDATE_PICO = ClassFactory(MessageApi.UPDATE_PICO, [])
     REMOTE_ROOM = ClassFactory(MessageApi.REMOTE_ROOM, ['inside'])
-
+    DISPLAY_TEXT = ClassFactory(MessageApi.DISPLAY_TEXT, ['text'])
 
 class Event():
 
@@ -276,3 +277,5 @@ class Event():
     EXIT_MENU = ClassFactory(EventApi.EXIT_MENU, [])
     UPDATE_PICO = ClassFactory(EventApi.UPDATE_PICO, ['tag'])
     REMOTE_ROOM = ClassFactory(EventApi.REMOTE_ROOM, ['inside'])
+    LIFT_PIECE = ClassFactory(EventApi.LIFT_PIECE, ['square'])
+    TAKE_BACK = ClassFactory(EventApi.TAKE_BACK, [])
