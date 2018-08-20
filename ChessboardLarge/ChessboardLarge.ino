@@ -48,7 +48,7 @@ void setup()
   lcd.setCursor(0,0); //Defining positon to write from first row,first column .
   lcd.print("PicoChess"); 
   lcd.setCursor(0,1);  
-  lcd.print("by Brian Loxton");
+  lcd.print("modified by Brian");
   lcd.setCursor(0,2);  
   lcd.print("");
   lcd.setCursor(0,3);  
