@@ -1,0 +1,18 @@
+python-targets:
+    - 3
+doc-warnings: yes
+test-warnings: no
+strictness: veryhigh
+max-line-length: 120
+ignore-paths:
+    - books
+    - docs
+    - engines
+    - etc
+    - games
+    - logs
+    - manual
+    - scripts
+    - tablebases
+    - test
+    - venv

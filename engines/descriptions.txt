@@ -1,0 +1,137 @@
+PicoChess Engines
+January 01, 2018
+
+
+1. STOCKFISH
+===========================
+Authors: T. Romstad, M. Costalba, J. Kiiski, G. Linscott
+Version: 8
+Date: October 2017
+Elo: 3360
+Levels: yes
+Chess960: yes
+License: GPLv3
+Source: https://stockfishchess.org/
+Description: Stockfish is universally recognized as the strongest open source engine
+in the world. Even on the modest hardware of a Raspberry Pi 3 it easily beats every
+super grandmaster. The vast amount of chess knowledge programmed into Stockfish makes
+it an ideal engine to analyze your games. You can set the engine at a lower skill
+level to have a chance of winning. Stockfish also supports Chess960 ('Fischer Random
+Chess').
+
+
+2. TEXEL
+===========================
+Author: Peter Österlund
+Version: 1.07
+Date: September 2017
+Elo: 3050
+Levels: yes
+Chess960: no
+License: GPLv3
+Source: http://web.comhem.se/petero2home/javachess/index.html#texel
+Description: Texel is the successor to CuckooChess. It is a very strong engine that
+will beat every human GM. But thanks to its different skill levels, Texel will
+appeal to chess players of every strength. For absolute beginners there is even
+a level 0, which lets the engine play random legal moves.
+
+
+3. ARASAN
+===========================
+Author: Jon Dart
+Version: 20.3
+Date: November 2017
+Elo: 2980
+Levels: yes
+Chess960: no
+License: MIT
+Source: http://arasanchess.org/
+Description: Arasan, or 'king' in the Tamil language, is a chess engine that has been
+around since 1994 – much longer than most other engines. It has evolved a lot over
+the years and is now a very attractive GM level engine. Arasan has a lot of features,
+including skill levels to make it an attractive opponent for players of every strength.
+
+
+4. RODENT III
+===========================
+Author: Paweł Kozioł
+Version: 0.233
+Date: November 2017
+Elo: 2920
+Levels: 'Personalities'
+Chess960: no
+License: GPLv3
+Source: https://github.com/nescitus/Rodent_III/
+Description: RodentIII is one of the few chess engines in the world that can adopt
+'personalities': it offers different playing styles rather than strength levels.
+RodentIII can just as easily be turned into a strong GM as into a beginning kid.
+It has both serious and funny personalities, like the positional defender and the
+crazy attacker.
+
+
+5. ZURICHESS
+=========================
+Author: Alexandru Moșoi
+Version: neuchatel
+Date: October 2017
+Elo: 2790
+Levels: yes ('Handicaps')
+Chess960: no
+License: BSD
+Source: http://www.zurichess.xyz/
+Description: Zurichess is a relatively young engine. Unlike most other engines
+it is not written in C++ but in the Go computer language. And unlike other
+engines, its versions are not numbered but named after the cantons of
+Switzerland. New versions of Zurichess are rapidly following up each other.
+The current version plays at GM level. Weaker opponents may like to set its
+handicap level a little higher.
+
+
+6. WyldChess
+===========================
+Author: Manik Charan
+Version: 1.5
+Date: September 2017
+Elo: 2630
+Levels: 'Personalities'
+Chess960: yes
+License: GPLv3
+Source: https://github.com/Mk-Chan/WyldChess
+Description: WyldChess offers something similar to RodentIII with personalities (needs to create more Personae)
+and also supports Chess960 ('Fischer Random Chess'). The evaluation is compared to the other top chess
+engines not as detailed, but its tactics is very strong.
+
+
+7. GALJOEN
+===========================
+Author: Werner Taelemans
+Version: 0.37.2
+Date: December 2017
+Elo: 2150
+Levels: yes
+Chess960: yes
+License: GPLv3
+Source: http://www.goudengaljoen.be/
+Description: Galjoen is a chess engine that plays at (stronger) club level. It has
+an active playing style. Together with its support for strength levels and Chess960
+('Fischer Random Chess') this makes Galjoen an ideal opponent for club players
+to practice their tactical and strategical skills. The program has its own graphical
+user interface, which is, of course, not used by PicoChess.
+
+
+8. SAYURI
+===========================
+Author: Hironori Ishibashi
+Version: 2017.12.16
+Date: December 2017
+Elo: 1840
+Levels: no
+Chess960: no
+License: MIT
+Source: https://github.com/MetalPhaeton/sayuri
+Description: Sayuri is a weaker chess engine than the other famous engines.
+Sayuri is a customizable UCI chess engine with Sayulisp (=Scheme-like Lisp interpreter)
+which allows you to customize the search algorithm or adjust the evaluation weights.
+For details please take a look at the sayuri webpage.
+If you are looking for a beatable engine that can teach you a thing or two about chess,
+then Sayuri is a good choice.

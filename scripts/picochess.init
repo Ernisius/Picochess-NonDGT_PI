@@ -1,0 +1,70 @@
+#!/bin/bash
+# /etc/init.d/picochess
+#
+
+# Some things that run always
+touch /var/lock/picochess
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting picochess"
+      if [ -e "/dev/ttyACM0" ]
+      then
+         dgt_port="/dev/ttyACM0"
+      elif [ -e "/dev/ttyUSB0" ]
+      then
+         dgt_port="/dev/ttyUSB0"
+      elif [ -e "/dev/rfcomm0" ]
+      then
+         #/opt/picochess/pico_dgt_bt.sh
+         dgt_port="/dev/rfcomm0"
+      else
+        # Start bluetooth detection. Call Eric Singer's script that covers both regular DGT and the REV II board.
+        # Should we support even more device checks?
+        echo "Starting bluetooth detection" 
+        scripts/pico_dgt_bt.sh
+        dgt_port="/dev/rfcomm0"
+      fi
+
+    # inserted for Laterunner - issue #200
+    ### for testing
+    # hcitool scan
+    #  rfcomm -a
+    # hciconfig
+    # hcitool scan
+
+     var_ip=`hostname -I|grep " "|cut -d " " -f1`
+     var_hci=`/usr/sbin/hciconfig|grep "^hci"|cut -d":" -f1`
+     var_mac=`rfcomm -a|grep "channel"|cut -d" " -f2`
+     var_port=`rfcomm -a|grep "channel"|cut -d" " -f1`
+     var_connection=`rfcomm -a|grep "rfc"|cut -d" " -f5`
+
+     echo ""
+     echo "IP:                                      "$var_ip
+     echo "hcix:                                    "$var_hci
+     echo "MAC Adresse eBoard:                       "$var_mac
+     echo "ACM0/ttyUSB/rfcomm0:                     "$dgt_port
+     echo "BT Port Status (clean/connected/closed): "$var_connection
+     echo "NOW PLEASE WAIT 15 secs"
+     echo ""
+     sleep 15
+     # ------------end of insertion--------------------------
+
+      echo $dgt_port
+      cd /opt/picochess
+      screen -dmUS pc python3 picochess.py -d $dgt_port -w -lf picochess.log -l debug
+    ;;
+  stop)
+    echo "Stopping picochess"
+    pkill -9 -f picochess.py
+    screen -wipe
+    ;;
+  *)
+    echo "Usage: /etc/init.d/picochess {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
