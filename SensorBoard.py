@@ -22,16 +22,14 @@ class SensorBoard(Observable, threading.Thread):
         self.flip_board = False
         self.arduino = serial.Serial('/dev/ttyUSB0', 115200, timeout=.1)
 
-    def Light_Square(self,mvlist,on):
-         if len(mvlist):
-            for square in mvlist:
-                if on:
-                    sq = "L" + str(square)
-                    self.arduino.write(str.encode(sq))
-                else:
-                    sq = "C" + str(square)
-                    self.arduino.write(str.encode(sq))
-            self.arduino.flush()
+    def Light_Square(self,sq,on):
+        if on:
+            sq = "L" + str(sq)
+            self.arduino.write(str.encode(sq))
+        else:
+            sq = "C" + str(sq)
+            self.arduino.write(str.encode(sq))
+        self.arduino.flush()
 
 
     def run(self):
