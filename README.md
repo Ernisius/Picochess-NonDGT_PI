@@ -8,8 +8,8 @@ Without These skills you will find it difficult to locate any wiring or componen
 It requires a I2c 20*4 LCD display connected to the raspberry pi via I2c.
 
 Functionality.
-To scan the reed switches, The Arduino uses a 4017 chip to set each row in turn  to + 5v, Then reads the columns into the arduino via the shift register. 
-It doesn't start to monitor buttons or reed matrix until it detects the pieces are set up to starting chess position, comment out the newgame line in the startup code to bypass this check.
+To scan the reed switches, the Arduino uses a 4017 chip to set each row in turn  to + 5v, Then reads the columns into the arduino via the shift register. 
+(nb It doesn't start to monitor buttons or reed matrix until it detects the pieces are set up to starting chess position, comment out the newgame line in the startup code to bypass this check.)
 When a reed swith opens or closes the led for that square are flashed.
 The arduino also monitors the buttons in the same way.
 It sends "B:n" for a button change or move (eg "D2D4") to the pi via the usb port.
